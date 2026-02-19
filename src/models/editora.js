@@ -23,7 +23,7 @@ class Editora {
     return db.select('*').from('editoras');
   }
 
-  static async pegarPeloId(id) {
+  static async pegarPeloId(id) { 
     const resultado = await db.select('*').from('editoras').where({ id });
     return resultado[0];
   }
@@ -36,7 +36,7 @@ class Editora {
       created_at: this.created_at,
       updated_at: this.updated_at,
     };
-    return db('editoras').insert(novaEditora);
+    return db('editoras').insert(novaEditora); 
   }
 
   async atualizar(id) {
